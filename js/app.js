@@ -35,8 +35,20 @@ angular.module('MobYourLife.Manual', [
 	});
 })
 
-.controller('ApresentacaoCtrl', function () {
-	//
+.controller('ApresentacaoCtrl', function ($scope) {
+	$scope.passo = 1;
+
+	$scope.anterior = function() {
+		if ($scope.passo > 1) {
+			$scope.passo -= 1;
+		}
+	}
+
+	$scope.proximo = function () {
+		if ($scope.passo < 4) {
+			$scope.passo += 1;
+		}
+	}
 })
 
 .controller('VantagensCtrl', function () {

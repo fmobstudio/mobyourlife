@@ -1,7 +1,43 @@
-<h1>Apresentação</h1>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h1>Bem-vindo ao Mob Your Life</h1>
+<p class="lead">Crie seu site de forma rápida e fácil</p>
+
+<div class="container">
+    <div class="process">
+        <div class="process-row">
+            <div class="process-step">
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 1, 'btn-primary': passo >= 1 }" ng-click="passo = 1;"><i class="fa fa-facebook fa-3x"></i></button>
+                <p>Entre com Facebook</p>
+            </div>
+            <div class="process-step">
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 2, 'btn-info': passo >= 2 }" ng-click="passo = 2;"><i class="fa fa-thumbs-o-up fa-3x"></i></button>
+                <p>Selecione sua fanpage</p>
+            </div>
+            <div class="process-step">
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 3, 'btn-warning': passo >= 3 }" ng-click="passo = 3;"><i class="fa fa-paint-brush fa-3x"></i></button>
+                <p>Escolha um tema</p>
+            </div> 
+            <div class="process-step">
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 4, 'btn-success': passo >= 4 }" ng-click="passo = 4;"><i class="fa fa-smile-o fa-3x"></i></button>
+                <p>Pronto!</p>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div ng-show="passo === 1" class="well">
+</div>
+
+<div ng-show="passo === 2" class="well">
+</div>
+
+<div ng-show="passo === 3" class="well">
+</div>
+
+<div ng-show="passo === 4" class="well">
+</div>
+
+<div>
+    <a ng-show="passo > 1" class="btn btn-default btn-lg pull-left" ng-click="anterior()"><i class="fa fa-chevron-left fa-fw"></i> Anterior</a>
+    <a ng-show="passo < 4" class="btn btn-primary btn-lg pull-right" ng-click="proximo()"><i class="fa fa-chevron-right fa-fw"></i> Próximo</a>
+    <a ng-show="passo === 4" class="btn btn-success btn-lg pull-right" href="http://www.mobyourlife.com.br" target="_blank"><i class="fa fa-star fa-fw"></i> Quero criar meu site!</a>
+</div>
