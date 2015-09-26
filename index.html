@@ -42,11 +42,11 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/apresentacao"><i class="fa fa-feed fa-fw"></i> Apresentação</a></li>
-                    <li><a href="#/vantagens"><i class="fa fa-star fa-fw"></i> Vantagens</a></li>
-                    <li><a href="#/precos"><i class="fa fa-usd fa-fw"></i> Preços</a></li>
-                    <li><a href="#/manual"><i class="fa fa-book fa-fw"></i> Manual</a></li>
-                    <li><a href="#/fale-conosco"><i class="fa fa-envelope-o fa-fw"></i> Fale Conosco</a></li>
+                    <li ng-class="{ 'active': $root.controller === 'ApresentacaoCtrl' }"><a href="#/apresentacao"><i class="fa fa-feed fa-fw"></i> Apresentação</a></li>
+                    <li ng-class="{ 'active': $root.controller === 'VantagensCtrl' }"><a href="#/vantagens"><i class="fa fa-star fa-fw"></i> Vantagens</a></li>
+                    <li ng-class="{ 'active': $root.controller === 'PrecosCtrl' }"><a href="#/precos"><i class="fa fa-usd fa-fw"></i> Preços</a></li>
+                    <li ng-class="{ 'active': $root.controller === 'ManualCtrl' }"><a href="#/manual"><i class="fa fa-book fa-fw"></i> Manual</a></li>
+                    <li ng-class="{ 'active': $root.controller === 'FaleConoscoCtrl' }"><a href="#/fale-conosco"><i class="fa fa-envelope-o fa-fw"></i> Fale Conosco</a></li>
                 </ul>
                 <ul class="nav navbar-nav pull-right">
                     <li><a href="http://www.mobyourlife.com.br" target="_blank"><i class="fa fa-sign-in fa-fw"></i> Acessar o sistema</a></li>
