@@ -5,19 +5,19 @@
     <div class="process">
         <div class="process-row">
             <div class="process-step">
-                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 1, 'btn-primary': passo >= 1 }" ng-click="passo = 1;"><i class="fa fa-facebook fa-3x"></i></button>
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 1, 'btn-primary': passo >= 1 }" ng-click="goto(1)"><i class="fa fa-facebook fa-3x"></i></button>
                 <p>Entre com Facebook</p>
             </div>
             <div class="process-step">
-                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 2, 'btn-info': passo >= 2 }" ng-click="passo = 2;"><i class="fa fa-thumbs-o-up fa-3x"></i></button>
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 2, 'btn-info': passo >= 2 }" ng-click="goto(2)"><i class="fa fa-thumbs-o-up fa-3x"></i></button>
                 <p>Selecione sua fanpage</p>
             </div>
             <div class="process-step">
-                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 3, 'btn-warning': passo >= 3 }" ng-click="passo = 3;"><i class="fa fa-paint-brush fa-3x"></i></button>
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 3, 'btn-warning': passo >= 3 }" ng-click="goto(3)"><i class="fa fa-paint-brush fa-3x"></i></button>
                 <p>Escolha um tema</p>
             </div> 
             <div class="process-step">
-                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 4, 'btn-success': passo >= 4 }" ng-click="passo = 4;"><i class="fa fa-smile-o fa-3x"></i></button>
+                <button type="button" class="btn btn-circle" ng-class="{ 'btn-default': passo < 4, 'btn-success': passo >= 4 }" ng-click="goto(4)"><i class="fa fa-smile-o fa-3x"></i></button>
                 <p>Pronto!</p>
             </div> 
         </div>

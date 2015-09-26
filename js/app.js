@@ -4,7 +4,7 @@ angular.module('MobYourLife.Manual', [
 
 .config(function ($routeProvider) {
 	$routeProvider
-		.when('/apresentacao', {
+		.when('/apresentacao/:passo?', {
 			templateUrl: 'partials/apresentacao.html',
 			controller: 'ApresentacaoCtrl'
 		})
@@ -35,19 +35,26 @@ angular.module('MobYourLife.Manual', [
 	});
 })
 
-.controller('ApresentacaoCtrl', function ($scope) {
-	$scope.passo = 1;
+.controller('ApresentacaoCtrl', function ($scope, $routeParams, $location) {
+	$scope.passo = $routeParams.passo || 1;
 
 	$scope.anterior = function() {
-		if ($scope.passo > 1) {
-			$scope.passo -= 1;
-		}
+		$scope.goto(Number($scope.passo) - 1);
 	}
 
 	$scope.proximo = function () {
-		if ($scope.passo < 4) {
-			$scope.passo += 1;
-		}
+		$scope.goto(Number($scope.passo) + 1);
+	}
+
+	$scope.goto = function (passo) {
+		$scope.passo = passo;
+		$location.path('/apresentacao/' + $scope.passo);
+	}
+
+	if ($scope.passo < 1) {
+		$scope.goto(1);
+	} else if ($scope.passo > 4) {
+		$scope.goto(4);
 	}
 })
 
