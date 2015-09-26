@@ -5,23 +5,23 @@ angular.module('MobYourLife.Manual', [
 .config(function ($routeProvider) {
 	$routeProvider
 		.when('/apresentacao', {
-			templateUrl: '/partials/apresentacao.html',
+			templateUrl: 'partials/apresentacao.html',
 			controller: 'ApresentacaoCtrl'
 		})
 		.when('/vantagens', {
-			templateUrl: '/partials/vantagens.html',
+			templateUrl: 'partials/vantagens.html',
 			controller: 'VantagensCtrl'
 		})
 		.when('/precos', {
-			templateUrl: '/partials/precos.html',
+			templateUrl: 'partials/precos.html',
 			controller: 'PrecosCtrl'
 		})
 		.when('/manual', {
-			templateUrl: '/partials/manual.html',
+			templateUrl: 'partials/manual.html',
 			controller: 'ManualCtrl'
 		})
 		.when('/fale-conosco', {
-			templateUrl: '/partials/fale-conosco.html',
+			templateUrl: 'partials/fale-conosco.html',
 			controller: 'FaleConoscoCtrl'
 		})
 		.otherwise({
