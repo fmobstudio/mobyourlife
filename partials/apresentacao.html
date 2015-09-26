@@ -24,20 +24,32 @@
     </div>
 </div>
 
-<div ng-show="passo === 1" class="well">
+<div ng-show="passo == 1">
+<h3>Entre com a sua conta do Facebook:</h3>
+<h4>Isto mesmo: você não precisa criar um novo cadastro.</h4>
+<h4>Use o Mob Your Life com a sua conta do Facebook. É rápido e seguro!</h4>
 </div>
 
-<div ng-show="passo === 2" class="well">
+<div ng-show="passo == 2">
+<h3>Selecione a sua fanpage:</h3>
+<h4>Após entrar com Facebook, selecione uma de suas fanpages para criar o seu site.</h4>
+<h4>Caso você não tenha uma, <a href="https://www.facebook.com/pages/create" target="_blank">clique aqui</a> para criar uma agora!</h4>
 </div>
 
-<div ng-show="passo === 3" class="well">
+<div ng-show="passo == 3">
+<h3>Escolha um tema:</h3>
+<h4>Temos algums temas prontos para você escolher, sem nenhum custo adicional.</h4>
 </div>
 
-<div ng-show="passo === 4" class="well">
+<div ng-show="passo == 4">
+<h3>Pronto!</h3>
+<h4>Uauuu! Viu como ficou fácil criar um site?</h4>
+<h4>Você não precisa de conhecimentos de programação ou design.</h4>
+<h4>Atualize a sua fanpage no Facebook, e em alguns minutos o seu site estará automaticamente atualizado.</h4>
 </div>
 
-<div>
+<div class="step-footer">
     <a ng-show="passo > 1" class="btn btn-default btn-lg pull-left" ng-click="anterior()"><i class="fa fa-chevron-left fa-fw"></i> Anterior</a>
     <a ng-show="passo < 4" class="btn btn-primary btn-lg pull-right" ng-click="proximo()"><i class="fa fa-chevron-right fa-fw"></i> Próximo</a>
-    <a ng-show="passo === 4" class="btn btn-success btn-lg pull-right" href="http://www.mobyourlife.com.br" target="_blank"><i class="fa fa-star fa-fw"></i> Quero criar meu site!</a>
+    <a ng-show="passo == 4" class="btn btn-success btn-lg pull-right" href="http://www.mobyourlife.com.br" target="_blank"><i class="fa fa-star fa-fw"></i> Quero criar meu site AGORA!</a>
 </div>
