@@ -1,6 +1,7 @@
 body
 {
     padding-top: 30px;
+    overflow-y: scroll;
 }
 
 .navbar-brand > img
