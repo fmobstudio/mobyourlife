@@ -16,8 +16,8 @@ angular.module('MobYourLife.Manual', [
 			templateUrl: 'partials/precos.html',
 			controller: 'PrecosCtrl'
 		})
-		.when('/manual', {
-			templateUrl: 'partials/manual.html',
+		.when('/manual/:subPagina?', {
+			templateUrl: 'partials/manual/index.html',
 			controller: 'ManualCtrl'
 		})
 		.when('/fale-conosco', {
@@ -66,6 +66,7 @@ angular.module('MobYourLife.Manual', [
 	//
 })
 
-.controller('ManualCtrl', function () {
-	//
+.controller('ManualCtrl', function ($scope, $routeParams) {
+	var subPagina = $routeParams.subPagina || 'home';
+	$scope.uri = 'partials/manual/subpaginas/' + subPagina + '.html';
 });
